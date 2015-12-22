@@ -575,7 +575,7 @@ public class Pve2Api {
 		return initlogOpenvz(node, vmid, new PveParams("start", start).Add("limit", limit));
 	}
 
-	protected String deleteOpenvz(String node, int vmid) throws LoginException, JSONException,
+	public String deleteOpenvz(String node, int vmid) throws LoginException, JSONException,
 			IOException {
 		JSONObject jObj = pve_action("/nodes/" + node + "/openvz/" + vmid,
 				RestClient.RequestMethod.DELETE, null);
